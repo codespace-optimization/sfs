@@ -1,0 +1,19 @@
+defaults:
+  - _self_
+  - solver: dummy  # Default solver
+
+executor:
+  class_module: src.executors.py_executor
+  class_name: PyExecutor
+  params:
+    verbosity: 2
+
+run_name: default_run
+dataset_name: humaneval-py_hardest50
+
+paths:
+  problem_set_path: data/original_problems/${dataset_name}.jsonl
+  test_set_path: 
+  solution_set_path: data/generated_solutions/${dataset_name}/${run_name}/solutions.jsonl
+  report_card_path: data/generated_solutions/${dataset_name}/${run_name}/report_card.log
+  results_path: data/generated_solutions/${dataset_name}/${run_name}

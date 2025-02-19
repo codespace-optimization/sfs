@@ -1,0 +1,117 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#promptForm {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333333;
+    margin-top: 10px;
+    display: block;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333333;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#output p {
+    font-size: 1rem;
+    color: #444444;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    margin-bottom: 5px;
+}
+
+
+#loading {
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: linear-gradient(90deg, rgba(0, 123, 255, 0) 0%, rgba(0, 123, 255, 0.5) 50%, rgba(0, 123, 255, 0) 100%);
+    background-size: 200% 100%;
+    animation: scanline 2s infinite linear;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px; /* Ensure consistent width */
+    min-height: 40px; /* Prevent height changes */
+    margin: 20px auto; /* Keep it centered */
+}
+
+/* Prevent flickering or shifting */
+#loadingText {
+    min-width: 280px; /* Slightly smaller than #loading to ensure text fits */
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+
+@keyframes scanline {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+

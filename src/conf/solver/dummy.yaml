@@ -1,0 +1,5 @@
+class_module: src.solvers.dummy
+class_name: DummySolver
+params:
+  strategy: optimized
+  verbosity: 2

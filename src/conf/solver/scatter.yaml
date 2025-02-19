@@ -1,0 +1,16 @@
+class_module: src.solvers.scatter
+class_name: ScatterSolver
+params:
+  model: gpt-3.5-turbo
+  generator: python
+  executor: python
+  number_of_tests: 3
+  max_iters: 5
+  strategy_library_name: mcts
+  num_seeds: 1
+  preamble_mode: none
+  num_ideas_per_strategy: 3
+  temperature: 0.0
+  testgen_method: simple
+  with_accummulated_context: false
+  do_fill_with_tests: true

@@ -1,0 +1,16 @@
+class_module: src.solvers.selfrepair
+class_name: SelfRepairSolver
+params:
+  model: gpt-3.5-turbo
+  generator: python
+  executor: python
+  number_of_tests: 3
+  max_iters: 5
+  num_seeds: 1
+  preamble_mode: none
+  temperature: 0.0
+  testgen_method: simple
+  with_accummulated_context: false
+  do_fill_with_tests: True
+  num_feedback_per_seed: 2
+  num_repairs_per_feedback: 2

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Agent Interface</title>
+    <link rel="stylesheet" href="/static/css/style.css"> <!-- Link to CSS file here -->
+</head>
+<body>
+    <form id="promptForm">
+        <label for="model">Select Model:</label>
+        <select id="model">
+            <option value="gpt-4o-mini">GPT-4o-mini</option>
+            <option value="gpt-3.5">GPT-3.5</option>
+            <option value="gpt-4">GPT-4</option>
+        </select>
+        
+        <label for="apiKey">API Key:</label>
+        <input type="password" id="apiKey" required>
+        
+        <label for="prompt">Enter Prompt:</label>
+        <textarea id="prompt" required></textarea>
+        
+        <label for="numTries">Number of Tries:</label>
+        <input type="number" id="numTries" min="1" value="10">
+        
+        <button type="submit">Submit</button>
+    </form>
+    <!-- Loading Screen -->
+    <div id="loading" style="display: none;">
+        <p id="loadingText">Loading...</p>
+    </div>
+
+
+    <div id="output"></div>
+
+    <script src="/static/js/main.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>

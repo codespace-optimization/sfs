@@ -1,0 +1,6 @@
+class_module: src.solvers.simple
+class_name: SimpleSolver
+params:
+  model: gpt-3.5-turbo
+  generator: python
+  temperature: 0.0
